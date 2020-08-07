@@ -116,7 +116,25 @@ Charitable Trust since intermediate.</li>
 
 <p></p>
 <p></p>
-<p>Place:Hyderabad</p>
+<p id="date"></p>
+<script>
+	var d=new Date();
+	var day,month,year;
+	if (d.getDate()<10){
+		day='0'+d.getDate();
+	}
+	else{
+		day=d.getDate();
+	}
+	if ((d.getMonth()+1)<10){
+		month='0'+(d.getMonth()+1);
+	}
+	else{
+	month=d.getMonth()+1;
+	}
+	var date=day+'-'+month+'-'+d.getFullYear();
+	document.getElementById("date").innerHTML='place: Hyderabad <br />date:'+date;
+</script>
 <p style="text-align:right;font-size:100%">N.SRISHYLAM</p>
 
 <p  style="text-align:center">
